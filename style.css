@@ -42,3 +42,8 @@ h1.headerobjright{
     flex-direction: row;
     justify-content: center;
 }
+
+img.github{
+    height: 1.5rem;
+    width: auto;
+}
