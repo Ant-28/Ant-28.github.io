@@ -14,6 +14,44 @@ div.header {
     width: 98%;
 }
 
+div.aboutme{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+div.aboutmepara{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: justify;
+}
+div.faq{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: justify;
+}
+
+
+
+div.myimgbox{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.myimg{
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+}
+div.myimgcaption{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: monospace;
+}
 
 div.footer {
     background-color: #c5a07ebb;
