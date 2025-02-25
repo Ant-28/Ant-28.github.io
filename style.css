@@ -1,3 +1,9 @@
+a{
+    white-space: nowrap;
+    display: inline;
+    text-align: start;
+    
+}
 div {
     margin: 8px;
 }
@@ -21,7 +27,7 @@ div.aboutme{
 }
 
 div.aboutmepara{
-    display: flex;
+    display: inline;
     flex-direction: column;
     justify-content: space-evenly;
     text-align: justify;
