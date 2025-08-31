@@ -50,7 +50,7 @@ div.myimgbox{
 div.myimg{
     display: flex;
     justify-content: center;
-    height: 50vh;
+    height: 35vh;
 }
 div.myimgcaption{
     display: flex;
