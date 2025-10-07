@@ -1,99 +1,46 @@
-a{
-    white-space: nowrap;
-    display: inline;
-    text-align: start;
-    
-}
-div {
-    margin: 8px;
-}
-div.header {
-    background-color: #c5a07ebb;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 1em;
-    padding-right: 1em;
-    border-radius: 5px;
-    
-    width: 98%;
-}
-
-div.aboutme{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-div.aboutmepara{
-    display: inline;
-    flex-direction: column;
-    justify-content: space-evenly;
-    text-align: justify;
-}
-div.faq{
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    text-align: justify;
-}
-
-
-
-div.myimgbox{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-div.myimg{
-    display: flex;
-    justify-content: center;
-    height: 35vh;
-}
-div.myimgcaption{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-family: monospace;
-}
-
-div.footer {
-    background-color: #c5a07ebb;
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items: center;
-    padding-left: 1em;
-    padding-right: 1em;
-    border-radius: 5px;
-    width: 98%;
-    
-}
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 10vw 80vw 10vw;
     margin: 0;
-    padding: 0 10px 0 10px;
-}
-h1{
-    font-family: monospace;
-    font-size: 12pt;
-}
-h1.headerobjleft{
-    flex-direction: row;
-    justify-content: center;
-}
-h1.headerobjright{
-    flex-direction: row;
-    justify-content: center;
+    padding: 0;
+    grid-template-rows: 100vh;
+    width: 100vw;
+    height: 100vh;
+    background-color: #dcdcdc;
+    font-family: "Futura"; /* find a suitable free alternative to Futura */
 }
 
-img.github{
-    height: 1.5rem;
-    width: auto;
+.pifheaderleft, .pifheaderright {
+    writing-mode: vertical-rl;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.25em;
+}
+
+.pifheaderleft a, .pifheaderright a {
+    text-decoration: none;
+}
+.pifheaderleft {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.pifheaderright {
+    writing-mode: vertical-lr;
+    transform: rotate(0deg);
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+a:link {
+    color: black;
+}
+a:visited {
+    color: black;
 }
