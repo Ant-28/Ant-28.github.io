@@ -1,9 +1,16 @@
+@font-face {
+    font-family: league-spartan;
+    src: url(./fonts/woffs/LeagueSpartan-Bold.woff);
+}
+
 html {
     position: absolute;
     height: 100;
     margin: 0;
     padding: 0;
-    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 body {
     display: grid;
@@ -14,7 +21,7 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: #dcdcdc;
-    font-family: "Futura"; /* find a suitable free alternative to Futura */
+    font-family: league-spartan; /* find a suitable free alternative to Futura */
     
 }
 
@@ -31,6 +38,9 @@ body {
 
 body br {
     display: block;
+}
+body img {
+    max-width: 100%;
 }
 
 body div.content-faq {
@@ -63,4 +73,8 @@ a:link {
 }
 a:visited {
     color: black;
+}
+
+a:hover{
+    text-decoration: underline;
 }

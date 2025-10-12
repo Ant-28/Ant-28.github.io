@@ -10,11 +10,11 @@ export function createHeader(direction){
 
     let pifHeader;
     if(direction === "right"){
-        pifHeader = appendNewElement(bodyNode, "div");
+        pifHeader = appendNewElement(bodyNode, "header");
     }
     else {
         
-        pifHeader = bodyNode.insertBefore(document.createElement("div"), bodyNode.children[0])
+        pifHeader = bodyNode.insertBefore(document.createElement("header"), bodyNode.children[0])
     }
     pifHeader.setAttribute("class", "pifheader" + direction)
     headerElem(pifHeader, "index.html", "[: Home :]")
@@ -24,7 +24,6 @@ export function createHeader(direction){
     headerElem(pifHeader, "contact.html", "[: Contact :]")
     
 }
-
 
 // create left header
 export const createHeaderLeft = () => createHeader("left");
