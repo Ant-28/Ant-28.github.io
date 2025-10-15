@@ -43,13 +43,12 @@ html {
     }
     body div.content-faq {      
         min-height: 0.8em;
-        min-width: 95vw;
         /* padding: 10px;
         padding-left: 40px; */
         padding-left: 2.5%;
         min-width: 95%;
         padding-right: 2.5%;
-        position: relative;
+        /* position: relative; */
         font-size: 20px;
     }
     .pifheaderleft, .pifheaderright {
@@ -82,12 +81,12 @@ html {
         
         height: 100vh;
         width: 100vw;
-        display: grid;
-        grid-template-columns: 100vw;
-        grid-template-rows: 100vh;
+        display: block;
+        /* grid-template-columns: 100vw;
+        grid-template-rows: 100vh; */
         justify-content: center;
         align-items: center;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
         
     }
     body div.content-faq {
