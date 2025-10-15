@@ -33,7 +33,7 @@ html {
         padding: 0px;
         grid-template-columns: 95vw;
         justify-items: center;
-
+        
         /* max-width: 80vw; */
         min-height: 100vh;
         background-color: #dcdcdc;
@@ -82,11 +82,8 @@ html {
         height: 100vh;
         width: 100vw;
         display: block;
-        /* grid-template-columns: 100vw;
-        grid-template-rows: 100vh; */
         justify-content: center;
         align-items: center;
-        /* overflow-x: hidden; */
         
     }
     body div.content-faq {

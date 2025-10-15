@@ -47,12 +47,6 @@ await createUpdateLog();
 createHeaderRight();
 let contentNode = document.querySelector("div.content");
 resizeObserver(contentNode);
-
-addEventListener("resize", (event) => {
-
-        resizeObserver(contentNode);    
-    
-});
-addEventListener("load", (event) => {
-        resizeObserver(contentNode);    
-});
+addEventListener("resize",           (event) => { resizeObserver(contentNode); }); 
+addEventListener("load",             (event) => { resizeObserver(contentNode); });
+addEventListener("DOMContentLoaded", (event) => { resizeObserver(contentNode); });

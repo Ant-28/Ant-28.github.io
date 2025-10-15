@@ -7,11 +7,6 @@ createHeaderRight();
 let contentNode = document.querySelector("div.content-faq");
 resizeObserver(contentNode);
 
-addEventListener("resize", (event) => {
-
-        resizeObserver(contentNode);    
-    
-});
-addEventListener("load", (event) => {
-        resizeObserver(contentNode);    
-});
+addEventListener("resize",           (event) => { resizeObserver(contentNode); }); 
+addEventListener("load",             (event) => { resizeObserver(contentNode); });
+addEventListener("DOMContentLoaded", (event) => { resizeObserver(contentNode); });
