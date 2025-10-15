@@ -45,3 +45,14 @@ async function createUpdateLog(){
 createHeaderLeft();
 await createUpdateLog();
 createHeaderRight();
+let contentNode = document.querySelector("div.content");
+resizeObserver(contentNode);
+
+addEventListener("resize", (event) => {
+
+        resizeObserver(contentNode);    
+    
+});
+addEventListener("load", (event) => {
+        resizeObserver(contentNode);    
+});

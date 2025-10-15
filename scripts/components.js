@@ -42,7 +42,7 @@ export function headerElem(parentNode, uri, textContent){
 }
 
 
-const shorterSideofElement = (elementNode) => (Math.min(elementNode.scrollHeight, elementNode.scrollWidth))
+// const shorterSideofElement = (elementNode) => (Math.min(elementNode.scrollHeight, elementNode.scrollWidth))
 
 export function resizeObserver(elementNode){
     // when the window resizes and the text overflows

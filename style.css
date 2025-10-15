@@ -28,10 +28,12 @@ html {
     body {
         
         display: grid;
-        grid-template-rows: 1fr 8fr 1fr;
+        grid-template-rows: 100px 8fr 100px;
         margin: 0px;
-        padding: 10px;
+        padding: 0px;
         grid-template-columns: 95vw;
+        justify-items: center;
+
         /* max-width: 80vw; */
         min-height: 100vh;
         background-color: #dcdcdc;
@@ -39,19 +41,28 @@ html {
         font-size: 1.25rem;
 
     }
-    body div.content-faq {
+    body div.content-faq {      
         min-height: 0.8em;
-        max-width: 95vw;
+        min-width: 95vw;
+        /* padding: 10px;
+        padding-left: 40px; */
+        padding-left: 2.5%;
+        min-width: 95%;
+        padding-right: 2.5%;
         position: relative;
         font-size: 20px;
     }
     .pifheaderleft, .pifheaderright {
+       
+
         display: flex;
         flex-flow: row wrap;
         justify-content: space-evenly;
         align-items: center;
         top: 0px;
-        max-width: 95vw;
+        padding-left: 2.5%;
+        min-width: 95%;
+        padding-right: 2.5%;
         font-size: 1rem;
     }
 
