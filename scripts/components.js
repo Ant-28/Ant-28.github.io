@@ -42,10 +42,12 @@ export function headerElem(parentNode, uri, textContent){
 }
 
 
+const shorterSideofElement = (elementNode) => (Math.min(elementNode.scrollHeight, elementNode.scrollWidth))
+
 export function resizeObserver(elementNode){
     // when the window resizes and the text overflows
     // the main overflowing content is the body
-    // add to blog post
+    // evil hack for content 
     if(window.matchMedia(`screen and (min-width: 1000px)`).matches){
         console.log("match");
         if(elementNode == null){
@@ -64,9 +66,10 @@ export function resizeObserver(elementNode){
         }
         let bodyNode = document.querySelector("body");
         let header1  = document.querySelector("header.pifheaderleft");
-        // let header2  = document.querySelector("header.pifheaderright");
+        let header2  = document.querySelector("header.pifheaderright");
         // make the body as big as the element node
-        document.querySelector("div.content-faq").style.height = `${elementNode.scrollHeight + header1.scrollHeight * 2.5 }px`; 
-        bodyNode.style.height = `${elementNode.scrollHeight + header1.scrollHeight * 2.5 }px`; 
-    } 
+        
+        bodyNode.style.height = `${elementNode.scrollHeight + header1.scrollHeight + header2.scrollHeight }px`; 
+        document.querySelector("div.content-faq").style.height = `${bodyNode.style.height}px`; 
+    }
 }
