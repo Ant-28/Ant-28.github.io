@@ -1,6 +1,6 @@
 @font-face {
     font-family: league-spartan;
-    src: url(./fonts/woffs/LeagueSpartan-Bold.woff);
+    src: url(./fonts/woffs/LeagueSpartan-VariableFont_wght.woff);
 }
 
 html {
@@ -33,7 +33,7 @@ html {
         padding: 0px;
         grid-template-columns: 95vw;
         justify-items: center;
-        
+        max-width: 90%;
         /* max-width: 80vw; */
         min-height: 100vh;
         background-color: #dcdcdc;
@@ -51,6 +51,18 @@ html {
         /* position: relative; */
         font-size: 20px;
     }
+    
+    body div.content-abt {      
+        min-height: 0.8em;
+        /* padding: 10px;
+        padding-left: 40px; */
+        padding-left: 10%;
+        min-width: 80%;
+        padding-right: 0%;
+        /* position: relative; */
+        font-size: 20px;
+    } 
+
     .pifheaderleft, .pifheaderright {
        
 
@@ -86,12 +98,15 @@ html {
         align-items: center;
         
     }
-    body div.content-faq {
+    body div.content-faq, body div.content-abt {
         min-height: 100vh;
         max-width: 95vw;
         position: relative;
         font-size: 20px;
     }
+
+
+
     body {
         display: grid;
         grid-template-columns: 10vw 80vw 10vw;
@@ -136,7 +151,43 @@ body img {
     max-width: 100%;
 }
 
+body div.content-abt {
+        display: grid;
+        grid-template-columns: 30% 80%;
+        grid-template-rows: 100%;
+        align-items: center;
+        -ms-grid-column-align: center;
+        justify-self: center;
+        justify-items: center;
+        
+    }
 
+figure {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+section.abtl{
+    max-width: 100%;
+    text-align: justify;
+}
+   
+section.abtr{
+    max-width: 70%;
+} 
+
+figcaption {
+        text-align: center;
+}
+
+div.content-abt img {
+    max-width: 60%;
+    justify-content: center;
+    align-items: center;
+}
 .pifheaderleft a, .pifheaderright a {
     text-decoration: none;
 }

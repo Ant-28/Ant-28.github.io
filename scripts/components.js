@@ -44,17 +44,20 @@ export function headerElem(parentNode, uri, textContent){
 
 // const shorterSideofElement = (elementNode) => (Math.min(elementNode.scrollHeight, elementNode.scrollWidth))
 
-export function resizeObserver(elementNode){
+export function resizeObserver(elementNode, def=document.querySelector("div.content-faq")){
+    
     // when the window resizes and the text overflows
     // the main overflowing content is the body
     // evil hack for content 
     if(window.matchMedia(`screen and (min-width: 1000px)`).matches){
         
         if(elementNode == null){
-            elementNode = document.querySelector("div.content-faq");
+            elementNode = def; // default
         }
         let bodyNode = document.querySelector("body");
-        let contentFaqNode = document.querySelector("div.content-faq");
+        let contentFaqNode = def;
+        // when you're at the 1000px border between the first and second media query,
+        // we want to remove styles 
         contentFaqNode.removeAttribute("style");
         // make the body as big as the element node
         bodyNode.style.height = `${elementNode.scrollHeight}px`; 
@@ -67,13 +70,14 @@ export function resizeObserver(elementNode){
     if(window.matchMedia(`screen and (max-width: 1000px)`).matches){
     
         if(elementNode == null){
-            elementNode = document.querySelector("div.content-faq");
+            elementNode = def;
         }
         let bodyNode = document.querySelector("body");
         // let header1  = document.querySelector("header.pifheaderleft");
         // let header2  = document.querySelector("header.pifheaderright");
         // make the body as big as the element node
-        let contentFaqNode = document.querySelector("div.content-faq");
+        let contentFaqNode = def;
+        contentFaqNode.removeAttribute("style");
         // ensure content isn't too wide
         contentFaqNode.style.width = `${bodyNode.clientWidth}px`;
     }       
